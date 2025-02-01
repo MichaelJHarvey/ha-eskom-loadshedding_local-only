@@ -29,20 +29,6 @@ async def async_setup_entry(hass, entry, async_add_devices):
     coordinator = hass.data[DOMAIN][entry.entry_id]
     async_add_devices(
         [
-            LoadsheddingStatusSensor(
-                coordinator,
-                entry,
-                area=NATIONAL_STATUS_AREA_ID,
-                sensor_id=NATIONAL_STATUS_ID,
-                friendly_name=NATIONAL_SATUS_NAME,
-            ),
-            LoadsheddingStatusSensor(
-                coordinator,
-                entry,
-                area=CAPE_TOWN_STATUS_AREA_ID,
-                sensor_id=CAPE_TOWN_STATUS_ID,
-                friendly_name=CAPE_TOWN_STATUS_NAME,
-            ),
             LoadsheddingAreaInfoSensor(
                 coordinator,
                 entry,

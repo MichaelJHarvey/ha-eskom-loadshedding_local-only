@@ -1,5 +1,5 @@
 {
-    "name": "Eskom Loadshedding Interface",
+    "name": "Eskom Loadshedding Interface (Local Only)",
     "domains": [
         "sensor"
     ],

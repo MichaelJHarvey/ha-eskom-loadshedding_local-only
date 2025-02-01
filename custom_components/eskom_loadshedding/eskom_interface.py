@@ -97,12 +97,10 @@ class EskomInterface:
     async def async_get_data(self):
         """Fetches all relevant data from the loadshedding API"""
         allowance = await self.async_get_allowance()
-        status = await self.async_get_status()
         area_information = await self.async_get_area_information()
 
         data = {
             "allowance": allowance,
-            "status": status,
             "area_information": area_information,
         }
         return data

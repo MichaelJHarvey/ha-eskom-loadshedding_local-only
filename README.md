@@ -1,4 +1,4 @@
-# Eskom Loadshedding Interface
+# Eskom Loadshedding Interface (Local Only)
 
 [![GitHub Release][releases-shield]][releases]
 [![GitHub Activity][commits-shield]][commits]
@@ -24,13 +24,11 @@ Platform | Description
 Entity | Description
 -- | --
 `sensor.loadshedding_api_quota` | The EskomSePush API quota associated with your API key.
-`sensor.loadshedding_national_status` | The current national loadshedding stage for Eskom-supplied customers.
-`sensor.loadshedding_cape_town_status` | The current loadshedding stage for City of Cape Town customers.
 `sensor.loadshedding_local_status` | The current loadshedding stage for your specific area.
 `calendar.loadshedding_local_events` | Calendar of upcoming loadshedding events for your specific area.
 `calendar.loadshedding_local_schedule` | Calendar containing the full 7-day loadshedding schedule for your specific area.
 
-The component update period defaults to 2 hours in order to avoid excess API quota consumption. This can be edited through the integration configuration, but you are responsible for monitoring your own API usage.
+The component update period defaults to 1 hour in order to avoid excess API quota consumption. This can be edited through the integration configuration, but you are responsible for monitoring your own API usage.
 
 The recommended way to automate actions around loadshedding events is to use calendar triggers. Below is an example of a simple automation to turn off a switch one hour before any loadshedding event in your area:
 
